@@ -1,0 +1,1482 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>expense-tracking-project documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">expense-tracking-project documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  AddUserComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/view/groupDetail/addUser.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+                <code>OnDestroy</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>add-user</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./addUser.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./addUser.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allUsers" >allUsers</a>
+                            </li>
+                            <li>
+                                <a href="#candidates" >candidates</a>
+                            </li>
+                            <li>
+                                <a href="#errorMsg" >errorMsg</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#group" >group</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#groupId" >groupId</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#searchEmail" >searchEmail</a>
+                            </li>
+                            <li>
+                                <a href="#selectedIds" >selectedIds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#sub" >sub</a>
+                            </li>
+                            <li>
+                                <a href="#trackByUserId" >trackByUserId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addSelected" >addSelected</a>
+                            </li>
+                            <li>
+                                <a href="#cancel" >cancel</a>
+                            </li>
+                            <li>
+                                <a href="#isSelected" >isSelected</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#toggleSelect" >toggleSelect</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#filteredCandidates" >filteredCandidates</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: ActivatedRoute, router: Router, groupRepo: <a href="../injectables/GroupRepositroy.html" target="_self">GroupRepositroy</a>, userRepo: <a href="../injectables/UserRepository.html" target="_self">UserRepository</a>, groupDetail: <a href="../injectables/GroupDataService.html" target="_self">GroupDataService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>groupRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GroupRepositroy.html" target="_self" >GroupRepositroy</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userRepo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserRepository.html" target="_self" >UserRepository</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>groupDetail</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/GroupDataService.html" target="_self" >GroupDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addSelected"></a>
+                    <span class="name">
+                        <span ><b>addSelected</b></span>
+                        <a href="#addSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addSelected()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="104"
+                                    class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:104</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancel"></a>
+                    <span class="name">
+                        <span ><b>cancel</b></span>
+                        <a href="#cancel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancel()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="156"
+                                    class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:156</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSelected"></a>
+                    <span class="name">
+                        <span ><b>isSelected</b></span>
+                        <a href="#isSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isSelected(userId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="99"
+                                    class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:99</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>userId</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnDestroy"></a>
+                    <span class="name">
+                        <span ><b>ngOnDestroy</b></span>
+                        <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="80"
+                                    class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleSelect"></a>
+                    <span class="name">
+                        <span ><b>toggleSelect</b></span>
+                        <a href="#toggleSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleSelect(userId: string | undefined)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="93"
+                                    class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:93</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>userId</td>
+                                            <td>
+                                                        <code>string | undefined</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allUsers"></a>
+                    <span class="name">
+                        <span ><b>allUsers</b></span>
+                        <a href="#allUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/User.html" target="_self" >User[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="candidates"></a>
+                    <span class="name">
+                        <span ><b>candidates</b></span>
+                        <a href="#candidates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../injectables/User.html" target="_self" >User[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="errorMsg"></a>
+                    <span class="name">
+                        <span ><b>errorMsg</b></span>
+                        <a href="#errorMsg"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="group"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>group</b></span>
+                        <a href="#group"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Group.html" target="_self" >Group</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="groupId"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>groupId</b></span>
+                        <a href="#groupId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchEmail"></a>
+                    <span class="name">
+                        <span ><b>searchEmail</b></span>
+                        <a href="#searchEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedIds"></a>
+                    <span class="name">
+                        <span ><b>selectedIds</b></span>
+                        <a href="#selectedIds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Set&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sub"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>sub</b></span>
+                        <a href="#sub"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="trackByUserId"></a>
+                    <span class="name">
+                        <span ><b>trackByUserId</b></span>
+                        <a href="#trackByUserId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:164</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-accessors">
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="filteredCandidates"></a>
+                        <span class="name"><b>filteredCandidates</b><a href="#filteredCandidates"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>filteredCandidates()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/view/groupDetail/addUser.component.ts:85</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import {
+  forkJoin,
+  map,
+  Observable,
+  of,
+  Subscription,
+  switchMap,
+  tap,
+} from &#x27;rxjs&#x27;;
+import { UserRepository } from &#x27;../../model/user.repository&#x27;;
+import { Group } from &#x27;../../model/group.model&#x27;;
+import { GroupRepositroy } from &#x27;../../model/group.repository&#x27;;
+import { User } from &#x27;../../model/user.model&#x27;;
+import { GroupDataService } from &#x27;../../services/groupdata.service&#x27;;
+
+@Component({
+  selector: &#x27;add-user&#x27;,
+  templateUrl: &#x27;./addUser.component.html&#x27;,
+  styleUrls: [&#x27;./addUser.component.css&#x27;],
+})
+export class AddUserComponent implements OnInit, OnDestroy {
+  // route
+  groupId?: string;
+
+  // data
+  group?: Group;
+  allUsers: User[] &#x3D; [];
+  candidates: User[] &#x3D; []; // users not already in group
+
+  // UI state
+  searchEmail &#x3D; &#x27;&#x27;;
+  selectedIds &#x3D; new Set&lt;string&gt;();
+  loading &#x3D; false;
+  errorMsg &#x3D; &#x27;&#x27;;
+  sub?: Subscription;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private groupRepo: GroupRepositroy,
+    private userRepo: UserRepository,
+    private groupDetail: GroupDataService
+  ) {}
+  ngOnInit(): void {
+    // group id can come either as path param (:id) or as query (?groupId&#x3D;)
+    this.groupId &#x3D; this.groupDetail.getGroupId();
+
+    this.sub &#x3D; this.groupRepo
+      .loadGroups()
+      .pipe(
+        map(() &#x3D;&gt; this.groupRepo.getGroup(this.groupId)),
+        switchMap((grp) &#x3D;&gt; {
+          if (!grp) {
+            this.group &#x3D; undefined;
+            return of([] as User[]); // ✅ always return User[]
+          }
+          this.group &#x3D; grp;
+          return this.userRepo.getAllUsers$(); // ✅ also User[]
+        }),
+        tap((users: User[]) &#x3D;&gt; {
+          if (!this.group) return;
+          this.allUsers &#x3D; users;
+          const members &#x3D; new Set(this.group.members ?? []);
+          // Only those not already in this group
+          this.candidates &#x3D; this.allUsers.filter(
+            (u) &#x3D;&gt; u.user_id &amp;&amp; !members.has(u.user_id)
+          );
+        })
+      )
+      .subscribe({
+        error: (err) &#x3D;&gt; {
+          console.error(err);
+          this.errorMsg &#x3D; &#x27;Failed to load data.&#x27;;
+        },
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.sub?.unsubscribe();
+  }
+
+  // case-sensitive contains on email
+  get filteredCandidates(): User[] {
+    if (!this.searchEmail) return this.candidates;
+    return this.candidates.filter((u) &#x3D;&gt;
+      (u.email ?? &#x27;&#x27;).includes(this.searchEmail)
+    );
+  }
+
+  // checkbox change
+  toggleSelect(userId: string | undefined) {
+    if (!userId) return;
+    if (this.selectedIds.has(userId)) this.selectedIds.delete(userId);
+    else this.selectedIds.add(userId);
+  }
+
+  isSelected(userId?: string): boolean {
+    return !!userId &amp;&amp; this.selectedIds.has(userId);
+  }
+
+  // submit
+  addSelected(): void {
+    if (!this.group || this.selectedIds.size &#x3D;&#x3D;&#x3D; 0) return;
+
+    this.loading &#x3D; true;
+    this.errorMsg &#x3D; &#x27;&#x27;;
+
+    const memberIdsToAdd &#x3D; Array.from(this.selectedIds);
+
+    // 1) Update group.members via PUT
+    this.groupRepo
+      .addMembersToGroup(memberIdsToAdd, this.groupId)
+      .pipe(
+        // 2) Update each user&#x27;s userGroups (PUT per user)
+        switchMap((updatedGroup) &#x3D;&gt; {
+          const updates: Observable&lt;any&gt;[] &#x3D; [];
+
+          memberIdsToAdd.forEach((uid) &#x3D;&gt; {
+            const user &#x3D; this.allUsers.find((u) &#x3D;&gt; u.user_id &#x3D;&#x3D;&#x3D; uid);
+            if (!user) return;
+
+            if (!user.userGroups) user.userGroups &#x3D; [];
+            // avoid duplicates
+            if (this.groupId) {
+              if (!user.userGroups.includes(this.groupId)) {
+                user.userGroups &#x3D; [...user.userGroups, this.groupId];
+              }
+            } else {
+              console.log(&#x27;group undefined&#x27;);
+            }
+
+            updates.push(this.userRepo.updateUserGroups(user));
+          });
+
+          return updates.length ? forkJoin(updates) : of([]);
+        }),
+        tap(() &#x3D;&gt; {
+          this.loading &#x3D; false;
+          // Navigate back to group details by group_id (route expects :id to be group_id)
+          this.router.navigateByUrl(
+            &#x27;/group/parent-group-details/group-details&#x27;
+          );
+        })
+      )
+      .subscribe({
+        error: (err) &#x3D;&gt; {
+          console.error(err);
+          this.loading &#x3D; false;
+          this.errorMsg &#x3D; &#x27;Failed to add members. Please try again.&#x27;;
+        },
+      });
+  }
+
+  cancel(): void {
+    if (this.groupId) {
+      this.router.navigate([&#x27;/group-details&#x27;, this.groupId]);
+    } else {
+      this.router.navigate([&#x27;/show-groups&#x27;]);
+    }
+  }
+
+  trackByUserId &#x3D; (_: number, u: User) &#x3D;&gt; u.user_id ?? u.id ?? _;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;main class&#x3D;&quot;add-users&quot;&gt;
+  &lt;header class&#x3D;&quot;header&quot;&gt;
+    &lt;h2&gt;Add Members to Group&lt;/h2&gt;
+    &lt;div class&#x3D;&quot;group-meta&quot; *ngIf&#x3D;&quot;group&quot;&gt;
+      &lt;div&gt;&lt;strong&gt;Group:&lt;/strong&gt; {{ group.group_name }}&lt;/div&gt;
+      &lt;div&gt;&lt;strong&gt;Category:&lt;/strong&gt; {{ group.category }}&lt;/div&gt;
+      &lt;div&gt;&lt;strong&gt;Description:&lt;/strong&gt; {{ group.description }}&lt;/div&gt;
+      &lt;div&gt;&lt;strong&gt;Group ID:&lt;/strong&gt; {{ groupId }}&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;section class&#x3D;&quot;controls&quot;&gt;
+    &lt;label for&#x3D;&quot;search&quot;&gt;Search by email (case-sensitive):&lt;/label&gt;
+    &lt;input
+      id&#x3D;&quot;search&quot;
+      type&#x3D;&quot;text&quot;
+      [(ngModel)]&#x3D;&quot;searchEmail&quot;
+      placeholder&#x3D;&quot;e.g. alice@example.com&quot;
+      [disabled]&#x3D;&quot;loading&quot;
+    /&gt;
+  &lt;/section&gt;
+
+  &lt;section class&#x3D;&quot;list&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;errorMsg&quot; class&#x3D;&quot;error&quot;&gt;{{ errorMsg }}&lt;/div&gt;
+
+    &lt;div *ngIf&#x3D;&quot;!errorMsg &amp;&amp; filteredCandidates.length &#x3D;&#x3D;&#x3D; 0&quot; class&#x3D;&quot;empty&quot;&gt;
+      &lt;p&gt;No users found to add for this filter.&lt;/p&gt;
+      &lt;button class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;searchEmail &#x3D; &#x27;&#x27;&quot; [disabled]&#x3D;&quot;loading&quot;&gt;
+        Clear Filter
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;ul *ngIf&#x3D;&quot;filteredCandidates.length &gt; 0&quot; class&#x3D;&quot;user-list&quot;&gt;
+      &lt;li
+        *ngFor&#x3D;&quot;let user of filteredCandidates; trackBy: trackByUserId&quot;
+        class&#x3D;&quot;user-row&quot;
+      &gt;
+        &lt;label class&#x3D;&quot;row-inner&quot;&gt;
+          &lt;input
+            type&#x3D;&quot;checkbox&quot;
+            [checked]&#x3D;&quot;isSelected(user.user_id)&quot;
+            (change)&#x3D;&quot;toggleSelect(user.user_id)&quot;
+            [disabled]&#x3D;&quot;loading&quot;
+          /&gt;
+          &lt;div class&#x3D;&quot;info&quot;&gt;
+            &lt;div class&#x3D;&quot;name&quot;&gt;{{ user.name || &quot;(no name)&quot; }}&lt;/div&gt;
+            &lt;div class&#x3D;&quot;email&quot;&gt;{{ user.email || &quot;(no email)&quot; }}&lt;/div&gt;
+            &lt;div class&#x3D;&quot;uid&quot;&gt;user_id: {{ user.user_id }}&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/label&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/section&gt;
+
+  &lt;footer class&#x3D;&quot;actions&quot;&gt;
+    &lt;button class&#x3D;&quot;btn secondary&quot; (click)&#x3D;&quot;cancel()&quot; [disabled]&#x3D;&quot;loading&quot;&gt;
+      Cancel
+    &lt;/button&gt;
+    &lt;button
+      class&#x3D;&quot;btn primary&quot;
+      (click)&#x3D;&quot;addSelected()&quot;
+      [disabled]&#x3D;&quot;loading || selectedIds.size &#x3D;&#x3D;&#x3D; 0&quot;
+      title&#x3D;&quot;Select at least one user&quot;
+    &gt;
+      {{ loading ? &quot;Adding...&quot; : &quot;Add Selected Users&quot; }}
+    &lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/main&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./addUser.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.add-users {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: &quot;Libertinus Sans&quot;, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.group-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 6px 16px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.controls input {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.list {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  padding: 8px;
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-row {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-row:last-child {
+  border-bottom: none;
+}
+
+.row-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.row-inner input[type&#x3D;&quot;checkbox&quot;] {
+  transform: translateY(2px);
+}
+
+.info .name {
+  font-weight: 600;
+}
+
+.info .email {
+  color: #444;
+}
+
+.info .uid {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #ffbf00;
+  color: #000;
+}
+
+.btn.secondary {
+  background: #eee;
+  color: #333;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #dc3545;
+  padding: 10px;
+}
+
+.empty {
+  padding: 12px;
+  color: #555;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><main class="add-users">  <header class="header">    <h2>Add Members to Group</h2>    <div class="group-meta" *ngIf="group">      <div><strong>Group:</strong> {{ group.group_name }}</div>      <div><strong>Category:</strong> {{ group.category }}</div>      <div><strong>Description:</strong> {{ group.description }}</div>      <div><strong>Group ID:</strong> {{ groupId }}</div>    </div>  </header>  <section class="controls">    <label for="search">Search by email (case-sensitive):</label>    <input      id="search"      type="text"      [(ngModel)]="searchEmail"      placeholder="e.g. alice@example.com"      [disabled]="loading"    />  </section>  <section class="list">    <div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>    <div *ngIf="!errorMsg && filteredCandidates.length === 0" class="empty">      <p>No users found to add for this filter.</p>      <button class="btn" (click)="searchEmail = \'\'" [disabled]="loading">        Clear Filter      </button>    </div>    <ul *ngIf="filteredCandidates.length > 0" class="user-list">      <li        *ngFor="let user of filteredCandidates; trackBy: trackByUserId"        class="user-row"      >        <label class="row-inner">          <input            type="checkbox"            [checked]="isSelected(user.user_id)"            (change)="toggleSelect(user.user_id)"            [disabled]="loading"          />          <div class="info">            <div class="name">{{ user.name || "(no name)" }}</div>            <div class="email">{{ user.email || "(no email)" }}</div>            <div class="uid">user_id: {{ user.user_id }}</div>          </div>        </label>      </li>    </ul>  </section>  <footer class="actions">    <button class="btn secondary" (click)="cancel()" [disabled]="loading">      Cancel    </button>    <button      class="btn primary"      (click)="addSelected()"      [disabled]="loading || selectedIds.size === 0"      title="Select at least one user"    >      {{ loading ? "Adding..." : "Add Selected Users" }}    </button>  </footer></main></div>'
+    var COMPONENTS = [{'name': 'AddExpenseComponent', 'selector': 'add-expense'},{'name': 'AddUserComponent', 'selector': 'add-user'},{'name': 'AdminGroupsComponent', 'selector': 'app-admin-groups'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthComponent', 'selector': 'app-auth'},{'name': 'CreateGroupComponent', 'selector': 'create-group'},{'name': 'GroupDetailComponent', 'selector': 'group-details'},{'name': 'LoginComponent', 'selector': 'app-root'},{'name': 'ParentGroupDetailComponent', 'selector': 'parent-group-detail'},{'name': 'ShowGroupsComponent', 'selector': 'show-Group'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'AddUserComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AddUserComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
